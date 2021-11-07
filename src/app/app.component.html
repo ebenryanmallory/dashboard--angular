@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+  <mat-icon>local_fire_department</mat-icon>
+  <span>Kanban Fire</span>
+</mat-toolbar>
+
+<div class="content-wrapper">
+  <div class="container-wrapper">
+    <div class="container">
+      <h2>Backlog</h2>
+      <ul>
+        <li class="text" *ngFor="let item of items | async">
+          {{item.title}} {{item.description}}
+        </li>
+      </ul>
+      
+    </div>
+
+    <div class="container">
+      <h2>In progress</h2>
+    </div>
+
+    <div class="container">
+      <h2>Done</h2>
+
+    </div>
+  </div>
+</div>

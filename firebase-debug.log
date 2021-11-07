@@ -1,0 +1,20 @@
+[debug] [2021-10-03T23:51:45.604Z] ----------------------------------------------------------------------
+[debug] [2021-10-03T23:51:45.611Z] Command:       /home/gitpod/.nvm/versions/node/v14.17.5/bin/node /workspace/template-golang-cli/node_modules/.bin/firebase login --reauth
+[debug] [2021-10-03T23:51:45.611Z] CLI Version:   9.19.0
+[debug] [2021-10-03T23:51:45.611Z] Platform:      linux
+[debug] [2021-10-03T23:51:45.612Z] Node Version:  v14.17.5
+[debug] [2021-10-03T23:51:45.612Z] Time:          Sun Oct 03 2021 23:51:45 GMT+0000 (Coordinated Universal Time)
+[debug] [2021-10-03T23:51:45.612Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-10-03T23:51:45.619Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=886764968&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-10-03T23:51:45.939Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-10-03T23:51:45.940Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+[info] Visit this URL on any device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=886764968&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob
+[info] 
