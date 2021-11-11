@@ -17,7 +17,7 @@ export class TmdbComponent implements OnInit {
   ngOnInit() {
     this.movieService.getMovies()
     .subscribe(tmdb => {
-      this.movies = tmdb['results'] || [];
+      this.movies = tmdb['results'].slice(0, 6) || [];
     })
   }
 

@@ -1,16 +1,15 @@
 <mat-toolbar color="primary">
-  <mat-icon>local_fire_department</mat-icon>
-  <span>Kanban Fire</span>
+  <span>To-do for the week</span>
 </mat-toolbar>
 
 <div class="content-wrapper">
   <div class="container-wrapper">
     <div class="container">
-      <h2>Backlog</h2>
+      <h2>Upcoming</h2>
       <ul>
-        <li class="text" *ngFor="let item of items | async">
+        <div class="text" *ngFor="let item of items | async">
           {{item.title}} {{item.description}}
-        </li>
+        </div>
       </ul>
       
     </div>
@@ -27,6 +26,6 @@
 
   <app-tmdb></app-tmdb>
   
-  <app-footer></app-footer>
-
 </div>
+
+<app-footer></app-footer>

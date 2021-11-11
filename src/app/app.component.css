@@ -45,3 +45,7 @@ mat-toolbar {
   .cdk-drag-placeholder {
     opacity: 0;
   }
+
+  .content-wrapper {
+    padding: 2rem;
+  }
