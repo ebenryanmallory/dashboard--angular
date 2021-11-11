@@ -7,8 +7,8 @@
     <div class="container">
       <h2>Upcoming</h2>
       <ul>
-        <div class="text" *ngFor="let item of items | async">
-          {{item.title}} {{item.description}}
+        <div class="text" *ngFor="let todo of todos | async">
+          {{todo.title}} {{todo.description}}
         </div>
       </ul>
       
@@ -25,7 +25,9 @@
   </div>
 
   <app-tmdb></app-tmdb>
-  
+
+  <app-hn></app-hn>
+
 </div>
 
 <app-footer></app-footer>

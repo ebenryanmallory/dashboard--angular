@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
+import { Todo } from './interfaces/todo';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,8 @@ import { Observable } from 'rxjs';
   styleUrls: ['app.component.css']
 })
 export class AppComponent {
-  items: Observable<any[]>;
+  todos: Observable<any[]>;
   constructor(firestore: AngularFirestore) {
-    this.items = firestore.collection('todo').valueChanges();
+    this.todos = firestore.collection('todo').valueChanges();
   }
 }
