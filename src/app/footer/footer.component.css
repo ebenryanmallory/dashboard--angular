@@ -1,0 +1,8 @@
+footer .footer {
+    display: block;
+    color: #fefefe;
+    background: #2c2c2c;
+    text-align: center;
+    min-height: 4rem;
+    padding: 1rem;
+}
