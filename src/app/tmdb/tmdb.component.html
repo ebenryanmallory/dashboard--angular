@@ -1,12 +1,18 @@
 <div class="page">
-    <div class="page-header">Movies</div>
-    <div class="page-body">
-      <div class="page-body__sidebar">
-        <ul class="movies-list"> 
-          <li class="list__item" *ngFor="let movie of movies">
-              <!-- {{ movie.title }} -->
-          </li>
-        </ul>
-      </div>
+  <div class="page-header">Movies</div>
+  <div class="page-body">
+    <div class="page-body__sidebar">
+      <ul class="movies-list" *ngFor="let movie of movies">
+        <li class="list__item">
+          {{ movie.title }}
+        </li>
+        <li class="list__item">
+          {{ movie.release_date }}
+        </li>
+        <li class="list__item">
+          {{ movie.overview }}
+        </li>
+      </ul>
     </div>
+  </div>
 </div>

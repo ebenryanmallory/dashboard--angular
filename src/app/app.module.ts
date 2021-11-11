@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
 import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
@@ -19,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 
 import { TmdbComponent } from './tmdb/tmdb.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { TaskComponent } from './task/task.component';
 import { TaskDialogComponent } from './task-dialog/task-dialog.component';
@@ -28,11 +30,13 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
   declarations: [
     AppComponent,
     TmdbComponent,
+    FooterComponent,
     TaskComponent,
     TaskDialogComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     BrowserAnimationsModule,

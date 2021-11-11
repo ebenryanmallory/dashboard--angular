@@ -1,10 +1,10 @@
-export interface Tmdb {
+export interface Movie {
   "adult": boolean,
-  backdrop_path: string,
+  "backdrop_path": string,
   "genre_ids": number[],
   "original_language": string,
-  original_title: string,
-  overview: string,
+  "original_title": string,
+  "overview": string,
   "popularity": number,
   "poster_path": string, 
   "release_date": string,
@@ -12,5 +12,9 @@ export interface Tmdb {
   "video": boolean, 
   "vote_average": number, 
   "vote_count": number, 
-  id: number
+  "id": number
+}
+
+export interface TMDB {
+  results: []
 }
