@@ -7,9 +7,10 @@
     <div class="container">
       <h2>Upcoming</h2>
       <ul>
-        <div class="text" *ngFor="let todo of todos | async">
-          {{todo.title}} {{todo.description}}
-        </div>
+        <mat-card class="text" *ngFor="let todo of todos | async">
+          <h3>{{todo.title}} </h3>
+          <p>{{todo.description}}</p>
+        </mat-card>
       </ul>
       
     </div>

@@ -23,18 +23,12 @@ import { TmdbComponent } from './tmdb/tmdb.component';
 import { HNComponent } from './hn/hn.component';
 import { FooterComponent } from './footer/footer.component';
 
-import { TaskComponent } from './task/task.component';
-import { TaskDialogComponent } from './task-dialog/task-dialog.component';
-
-
 @NgModule({
   declarations: [
     AppComponent,
     TmdbComponent,
     HNComponent,
-    FooterComponent,
-    TaskComponent,
-    TaskDialogComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,

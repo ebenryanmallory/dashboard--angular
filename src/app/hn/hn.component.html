@@ -1,12 +1,33 @@
 <div class="section">
   <div class="section-header">
-    <h2>News Stories</h2>
+    <h2>Latest News Stories</h2>
   </div>
-  <div class="container">
-    <div class="story-list" *ngFor="let story of stories">
-      <p class="story--title">
-        {{ story.title }}
-      </p>
-    </div>
+  <div class="outer">
+    <mat-card class="container">
+      <div class="story-list" *ngFor="let story of stories | slice:0:5">
+        <h3 class="story--title">
+          {{ story.title }}
+        </h3>
+        <p class="story--by">
+          Story creator: {{ story.by }} <br />
+          <a mat-button class="story--by" href={{story.url}} target="_blank">
+            Read more...
+          </a>
+        </p>
+      </div>
+    </mat-card>
+    <mat-card class="container">
+      <div class="story-list" *ngFor="let story of stories | slice:5:10">
+        <h3 class="story--title">
+          {{ story.title }}
+        </h3>
+        <p class="story--by">
+          Story creator: {{ story.by }} <br />
+          <a mat-button class="story--by" href={{story.url}} target="_blank">
+            Read more...
+          </a>
+        </p>
+      </div>
+    </mat-card>
   </div>
 </div>
