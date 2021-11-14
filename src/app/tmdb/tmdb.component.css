@@ -1,3 +1,6 @@
+.section-header {
+  padding: 0rem 1rem;
+}
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -29,4 +32,7 @@
 }
 .poster {
   background-size: cover;
+}
+.movie--title {
+  margin-top: 10rem;
 }

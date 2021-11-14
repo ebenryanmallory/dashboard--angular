@@ -3,19 +3,28 @@
   padding: 1rem 1rem;
 }
 
+.sidebar-container .nav-item {
+    margin: 1rem 0rem;
+}
+
+.sidebar-container .nav-item a {
+    color: #2c2c2c;
+    margin: 0;
+    line-height: 30px;
+    font-size: 14px;
+    position: relative;
+    display: block;
+    height: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+
 .sidebar-container a {
   text-decoration: none;
 }
 
-.sidebar-container .nav-item a {
+.sidebar-container .nav-item.active a {
   color: #fefefe;
-  margin: 0;
-  line-height: 30px;
-  font-size: 14px;
-  position: relative;
-  display: block;
-  height: auto;
-  white-space: nowrap;
 }
 
 .sidebar-container .nav-item:hover a {
@@ -24,14 +33,12 @@
 
 .sidebar-container .nav-item:hover {
   background: #dbdbdb;
-  padding: 10px;
   box-shadow: none;
   cursor: pointer;
 }
 
 .sidebar-container .active {
   background: #f436b1;
-  padding: 10px;
   box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(244 67 54 / 40%);
 }
 
@@ -58,8 +65,7 @@ mat-toolbar>span {
 }
 
 .container {
-  width: 400px;
-  margin: 0 25px 25px 0;
+    padding: 1rem 1rem;
 }
 
 .list {
@@ -88,5 +94,8 @@ app-new-task {
 }
 
 .content-wrapper {
-  padding: 2rem;
+  padding: 1rem 1rem;
+}
+.hidden {
+    display: none;
 }
