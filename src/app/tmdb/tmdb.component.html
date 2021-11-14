@@ -4,7 +4,7 @@
   </div>
   <div class="wrapper">
     <mat-card class="movies-list" *ngFor="let movie of movies | slice:0:3">
-      <div class="container poster" style="background-image: url({{baseURL + movie.poster_path}})">
+      <div class="container poster" [style]="getFullPath(movie.poster_path)">
         <p class="movie--title">
           {{ movie.title }}
         </p>
@@ -17,7 +17,7 @@
       </div>
     </mat-card>
     <mat-card class="movies-list" *ngFor="let movie of movies | slice:3:6">
-      <div class="container">
+      <div class="container poster" [style]="getFullPath(movie.poster_path)">
         <p class="movie--title">
           {{ movie.title }}
         </p>
