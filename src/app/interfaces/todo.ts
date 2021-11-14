@@ -1,4 +1,5 @@
 export interface Todo {
-  title: string,
-  description?: string
+  checked: boolean,
+  description: string
+  color?: string
 }

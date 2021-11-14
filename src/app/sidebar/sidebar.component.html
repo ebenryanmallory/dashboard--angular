@@ -1,0 +1,43 @@
+<mat-drawer-container class="sidebar-container">
+    <mat-drawer mode="side" opened>
+        <div class="nav">
+            <div class="nav-item active">
+                <a class="nav-link" href="#home"><i class="material-icons">dashboard</i>
+                    Display all
+                </a>
+            </div>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+    <div class="content-wrapper">
+        <div class="container">
+            <h2>Upcoming</h2>
+            <mat-card cdkDropList #todoList="cdkDropList" class="example-list text" (cdkDropListDropped)="drop($event)">
+                <p class="empty-label" *ngIf="(todosArray)?.length === 0">Empty list</p>
+                <div class="example-box" *ngFor="let todo of todosArray" cdkDrag>
+                    <span>
+                        <mat-checkbox class="example-margin">
+                            {{todo.description}}
+                        </mat-checkbox>
+                    </span>
+                </div>
+            </mat-card>
+
+        </div>
+
+    </div>
+
+    <div class="content-wrapper">
+
+        <app-tmdb></app-tmdb>
+
+    </div>
+    
+    <div class="content-wrapper">
+
+        <app-hn></app-hn>
+
+    </div>
+
+    </mat-drawer-content>
+</mat-drawer-container>

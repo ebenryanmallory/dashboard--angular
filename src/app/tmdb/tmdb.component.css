@@ -1,14 +1,33 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 0rem;
+}
+
 .container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem 0rem;
 }
+
 @media screen and (min-width: 600px) {
-    .container {
-        flex-wrap: nowrap;
-    }
+  .container {
+    flex-wrap: nowrap;
+  }
 }
+
 .movies-list {
-    padding: 1rem;
+  width: calc(50% - 2.5rem);
+  padding: 1rem;
+  margin: 0.25rem;
+}
+.movies-list p {
+  background: #fefefeb8;
+  padding: 10px;
+}
+.poster {
+  background-position: center;
+  background-size: cover;
 }

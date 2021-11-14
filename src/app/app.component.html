@@ -1,34 +1,7 @@
 <mat-toolbar color="primary">
-  <span>To-do for the week</span>
+  <span>Happening now</span>
 </mat-toolbar>
 
-<div class="content-wrapper">
-  <div class="container-wrapper">
-    <div class="container">
-      <h2>Upcoming</h2>
-      <ul>
-        <mat-card class="text" *ngFor="let todo of todos | async">
-          <h3>{{todo.title}} </h3>
-          <p>{{todo.description}}</p>
-        </mat-card>
-      </ul>
-      
-    </div>
-
-    <div class="container">
-      <h2>In progress</h2>
-    </div>
-
-    <div class="container">
-      <h2>Done</h2>
-
-    </div>
-  </div>
-
-  <app-tmdb></app-tmdb>
-
-  <app-hn></app-hn>
-
-</div>
+<app-sidebar></app-sidebar>
 
 <app-footer></app-footer>

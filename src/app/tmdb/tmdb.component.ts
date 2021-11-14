@@ -10,6 +10,7 @@ import { Movie } from '../interfaces/movie'
 
 export class TmdbComponent implements OnInit {
 
+  baseURL = 'https://www.themoviedb.org/t/p/w440_and_h660_face/';
   movies: Movie[] = [];
 
   constructor(private movieService: MoviesService) { }
