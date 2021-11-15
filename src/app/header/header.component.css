@@ -1,0 +1,31 @@
+.hidden {
+    display: none;
+}
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+.toolbar span {
+    align-self: center;
+    justify-self: flex-start;
+}
+.profile {
+  align-self: center;
+  justify-self: flex-end;
+  margin-left: auto;
+  cursor: pointer;
+  position: relative;
+}
+.profile-content {
+  position: absolute;
+  top: 30px;
+  left: -9rem;
+  background: #403a40;
+  width: 10rem;
+  z-index: 100;
+  font-size: 13px;
+  padding: 10px;
+  cursor: default;
+}

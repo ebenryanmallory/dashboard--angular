@@ -1,5 +1,7 @@
 export interface Todo {
+  id?: any,
+  order?: number,
   checked: boolean,
-  description: string
+  description: string,
   color?: string
 }

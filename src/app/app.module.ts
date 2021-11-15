@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
@@ -26,6 +24,9 @@ import { TmdbComponent } from './tmdb/tmdb.component';
 import { HNComponent } from './hn/hn.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './header/header.component';
+import { MainContentComponent } from './main-content/main-content.component';
+import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,10 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     TmdbComponent,
     HNComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    HeaderComponent,
+    MainContentComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,

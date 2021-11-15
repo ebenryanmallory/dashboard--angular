@@ -1,8 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Todo } from '../interfaces/todo';
-import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
-import { Observable } from 'rxjs';
-import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,22 +7,7 @@ import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 })
 export class SidebarComponent implements OnInit {
 
-  private todosCollection: AngularFirestoreCollection<Todo>;
-  todos: Observable<Todo[]>;
-  todosArray: Todo[] = [];
-
-  constructor(firestore: AngularFirestore) {
-    this.todosCollection = firestore.collection<Todo>('todos');
-    this.todos = this.todosCollection.valueChanges();
-    this.todos.subscribe(content => this.todosArray = content);
-  }
-
-  drop(event: CdkDragDrop<Todo[]>): void {
-    moveItemInArray(this.todosArray, event.previousIndex, event.currentIndex);
-  }
-  addItem(todo: Todo) {
-    this.todosCollection.add(todo);
-  }
+  constructor() {}
 
   displayDashboard(emit: any) {
     document.querySelectorAll('.active').forEach(active => active.classList.remove('active'));
@@ -51,7 +32,6 @@ export class SidebarComponent implements OnInit {
     document.querySelectorAll('.content-wrapper').forEach(wrapper => wrapper.classList.add('hidden'));
     document.querySelectorAll('#news').forEach(news => news.classList.remove('hidden'));
   }
-
   ngOnInit(): void {
   }
 

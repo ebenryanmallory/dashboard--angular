@@ -9,54 +9,27 @@
             </div>
             <div class="nav-item" (click)="displayTodos($event)" clickable>
                 <a class="nav-link" href="#todos">
-                    <i _ngcontent-vjk-c2="" class="material-icons">content_paste</i>
+                    <i class="material-icons">content_paste</i>
                     Todo List
                 </a>
             </div>
             <div class="nav-item" (click)="displayMovies($event)" clickable>
                 <a class="nav-link" href="#todos">
-                    <i _ngcontent-vjk-c2="" class="material-icons">movie_filter</i>
+                    <i class="material-icons">movie_filter</i>
                     Movies
                 </a>
             </div>
             <div class="nav-item" (click)="displayNews($event)" clickable>
                 <a class="nav-link" href="#todos">
-                    <i _ngcontent-vjk-c2="" class="material-icons">feed</i>
+                    <i class="material-icons">feed</i>
                     News
                 </a>
             </div>
         </div>
     </mat-drawer>
     <mat-drawer-content>
-    <div id="todos" class="content-wrapper">
-        <div class="container">
-            <h2>Upcoming</h2>
-            <mat-card cdkDropList #todoList="cdkDropList" class="example-list text" (cdkDropListDropped)="drop($event)">
-                <p class="empty-label" *ngIf="(todosArray)?.length === 0">Empty list</p>
-                <div class="example-box" *ngFor="let todo of todosArray" cdkDrag>
-                    <span>
-                        <mat-checkbox [checked]="todo.checked" class="example-margin">
-                            {{todo.description}}
-                        </mat-checkbox>
-                    </span>
-                </div>
-            </mat-card>
 
-        </div>
-
-    </div>
-
-    <div id="movies" class="content-wrapper">
-
-        <app-tmdb></app-tmdb>
-
-    </div>
+        <app-main-content></app-main-content>
     
-    <div id="news" class="content-wrapper">
-
-        <app-hn></app-hn>
-
-    </div>
-
     </mat-drawer-content>
 </mat-drawer-container>

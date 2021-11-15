@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-15ded": {
+      "hosting": {
+        "dashboard--angular": [
+          "angular-15ded"
+        ]
+      }
+    }
+  }
+}
