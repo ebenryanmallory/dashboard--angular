@@ -4,7 +4,7 @@
         <p class="empty-label" *ngIf="(todosArray)?.length === 0">Empty list</p>
         <div class="box" *ngFor="let todo of todosArray" cdkDrag>
             <mat-checkbox [checked]="todo.checked" class="margin"></mat-checkbox>
-            <input #input (blur)="0" value="{{input.value || todo.description}}" />
+            <input #input (blur)="updateTask($event, todo.id)" [attr.order]="todo.order" value="{{input.value || todo.description}}" />
         </div>
         <button mat-button (click)="addItem('New task', false)">Add new</button>
         <div *ngIf="auth.user | async as user; else showLogin">

@@ -27,15 +27,29 @@ export class TodosComponent implements OnInit {
     this.auth.authState.subscribe(user => {
       if (user) {
         this.userData = user;
+        this.todosCollection = this.firestore.collection('users').doc(this.userData.uid).collection<Todo>('todos');
+        this.todos = this.todosCollection.valueChanges();
+        this.todos.subscribe(content => this.todosArray = content);
       }
     })
   }
   drop(event: CdkDragDrop<Todo[]>): void {
     moveItemInArray(this.todosArray, event.previousIndex, event.currentIndex);
   }
-  updateTodo() {
+  updateTask(emit: any, id: string) {
+    let todo = {
+      description: emit.target.value,
+      id: id,
+      checked: emit.target.previousSibling.classList.contains('mat-checkbox-checked')
+    };
+    if (this.auth.user) {
+      this.firestore.collection('users').doc(this.userData.uid).collection('todos').doc(id).update(todo);
+    }
+  }
+  updateTodos() {
     this.todosArray.map((todo: Todo) => {
-      const id = this.firestore.createId();
+      console.log(todo)
+      const id = todo.id;
       this.firestore.collection('users').doc(this.userData.uid).collection('todos').doc(id).set(todo);
     });
   }
@@ -53,12 +67,15 @@ export class TodosComponent implements OnInit {
   async login() {
     const result = await this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
     await this.SetUserData(result.user);
-    await this.updateTodo();
+    this.updateTodos();
     this.todosCollection = this.firestore.collection('users').doc(this.userData.uid).collection<Todo>('todos');
     this.todos = this.todosCollection.valueChanges();
     this.todos.subscribe(content => this.todosArray = content);
   }
   logout() {
+    this.todosCollection = this.firestore.collection<Todo>('todos');
+    this.todos = this.todosCollection.valueChanges();
+    this.todos.subscribe(content => this.todosArray = content);
     this.auth.signOut();
   }
   SetUserData(user:any) {
@@ -76,7 +93,6 @@ export class TodosComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
